@@ -1,0 +1,169 @@
+* { 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #121214;
+}
+
+.container {
+    background: url("./assets/fundo.svg") no-repeat center;
+    background-size: cover;
+    line-height: 160%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image {
+    height: 120px;
+    margin: 16px auto;
+    text-align: center;
+}
+
+.content-profile {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: transform .4s;
+}
+
+.content-profile:hover {
+    transform: scale(1.1);
+}
+
+.image-profile {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.content-cards {
+    max-width: 580px;
+    width: 90%;
+    margin: 16px auto;
+    display: grid;
+    gap: 24px;
+}
+
+.section-cards {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding: 5px 0px 0px;
+    border-radius: 12px;
+}
+
+.cards {
+    background-color: #2A2634;
+    padding: 24px 32px 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    line-height: 38.4px;
+    letter-spacing: -0.47px;
+}
+
+.description {
+    letter-spacing: -0.18px;
+    color: #a1a1aa
+}
+
+.games-list, .channels-list {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.games, .streamers, .socials {
+    transition: transform .4s;
+}
+
+.games:hover, .streamers:hover {
+    box-shadow: 0px 0px 20px #1c1c1e;
+}
+
+.games:hover, .streamers:hover, .socials:hover {
+    transform: scale(1.1);
+}
+
+.games {
+    max-width: 90px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.streamers {
+    border-radius: 50%;
+    max-width: 70px;
+    width: 100%;
+}
+
+.games, .streamers, .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.content-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* Animation field */
+
+.content-profile {
+    animation: toBottom .8s 0.1s backwards;
+}
+
+.section-cards:nth-child(1) {
+    animation: toRight .8s 0.5s backwards;
+    z-index: 3;
+}
+
+.section-cards:nth-child(2) {
+    z-index: 2;
+    animation: toRight .8s 1s backwards;
+}
+
+.section-cards:nth-child(3) {
+    z-index: 1;
+    animation: toRight .8s 1.5s backwards;
+}
+
+@keyframes toBottom {
+    from {
+        opacity: 0;
+        transform: translatey(-150px)
+    };
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    };
+}
+
+@keyframes toRight {
+    from {
+        opacity: 0;
+        transform: translatex(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
